@@ -16,3 +16,10 @@ Scenario: Cannot submit enquiry without email address
 		And I enter a last name of Cordy
 	When I submit my enquiry
 	Then I should see an error message about missing email address
+
+Scenario: Cannot submit enquiry without organisation
+	Given I am on the ContactUs page
+		And I enter a first name of Lance
+		And I enter a last name of Cordy
+	When I submit my enquiry
+	Then I should see an error message about missing email address
